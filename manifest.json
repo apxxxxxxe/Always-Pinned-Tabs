@@ -1,0 +1,27 @@
+{
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "description": "Always pin the specified tab. Unlike the standard pinning function, it also works on newly created windows.",
+  "manifest_version": 2,
+  "name": "Always Pinned Tabs",
+  "version": "1.0",
+  "homepage_url": "https://github.com/apxxxxxxe/Always-Pinned-Tabs",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "background": {
+    "page": "background/background.html"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  }
+
+}

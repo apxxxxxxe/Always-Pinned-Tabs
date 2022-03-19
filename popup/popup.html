@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+  </head>
+  <body>
+    <h1 class="title">Always Pinned Tabs</h1>
+    <div id="list"></div>
+    <div class="flex-container flex-column">
+      <form class="url-form">
+        <label><input type="text" id="urlInput" placeholder="Enter favorite URL"></label>
+        <button type="submit" title="save the entered URL">Save</button>
+        <button id="loadButton" title="save current pinned tabs"><img src="../icons/loadButton.png"></button>
+      </form>
+      <p class="description">Tabs are opened every 5 seconds.</p>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  width: 300px;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+}
+
+.page-choice {
+  flex: 1;
+  padding: 4px;
+  font-size: 1rem;
+  text-align: center;
+  word-break: break-all;
+}
+
+.deleteButton {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  padding:4px;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center; /** 真ん中寄せ **/
+  align-items: center;
+  margin: 0 1rem;
+  border-radius: 5px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.listitem:hover {
+  background-color: #4c6cb3;
+  color: #fff;
+}
+
+#loadButton {
+  font-size: 1rem;
+  width: 2rem;
+}
+
+#loadButton > img {
+  width: 100%;
+}
+
+.centerize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.url-form {
+  margin: 1rem 1rem 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  margin: 0.2rem 0.32rem 0.8rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.description {
+  margin: 0.4rem auto 0.6rem;
+  font-size: 0.8rem;
+  color: #777;
+}
