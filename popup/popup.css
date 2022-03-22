@@ -2,7 +2,8 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   width: 300px;
   font-size: 16px;
   background: #fff;
@@ -24,7 +25,7 @@ html, body {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  padding:4px;
+  padding: 4px;
 }
 
 .flex-container {
@@ -33,7 +34,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
-  -webkit-justify-content: center; /** 真ん中寄せ **/
+  -webkit-justify-content: center;
   align-items: center;
   margin: 0 1rem;
   border-radius: 5px;

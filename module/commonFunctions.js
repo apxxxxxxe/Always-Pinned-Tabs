@@ -36,14 +36,18 @@ function uniqArray(array) {
 
 async function openPinnedTabs() {
   let discovered_tabs;
-  const urls = loadStrageArray('urls');
+  const urls = loadStrageArray("urls");
   for (let url of urls) {
-    discovered_tabs = await browser.tabs.query({ url: "*://*." + formatDomain(url) + "/*", pinned: true, currentWindow: true });
+    discovered_tabs = await browser.tabs.query({
+      url: "*://*." + formatDomain(url) + "/*",
+      pinned: true,
+      currentWindow: true,
+    });
     if (!discovered_tabs.length) {
       browser.tabs.create({
         url: "http://" + url,
         pinned: true,
-        active: false
+        active: false,
       });
     }
   }

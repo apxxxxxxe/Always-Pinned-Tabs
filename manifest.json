@@ -1,12 +1,9 @@
 {
-  "permissions": [
-    "storage",
-    "tabs"
-  ],
+  "permissions": ["storage", "tabs"],
   "description": "Always pin the specified tab. Unlike the standard pinning function, it also works on newly created windows.",
   "manifest_version": 2,
   "name": "Always Pinned Tabs",
-  "version": "1.0",
+  "version": "1.01",
   "homepage_url": "https://github.com/apxxxxxxe/Always-Pinned-Tabs",
   "icons": {
     "48": "icons/icon-48.png",
@@ -23,5 +20,4 @@
       "32": "icons/icon-32.png"
     }
   }
-
 }
