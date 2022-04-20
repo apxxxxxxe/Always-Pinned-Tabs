@@ -3,7 +3,7 @@ function loadStrageArray(key) {
   // JSONからの変換に失敗した場合は空配列を返す
   function isValidJSON(data) {
     try {
-      let value = JSON.parse(data);
+      const value = JSON.parse(data);
       if (value === null) {
         return false;
       } else {
@@ -13,7 +13,7 @@ function loadStrageArray(key) {
       return false;
     }
   }
-  let values = localStorage.getItem(key);
+  const values = localStorage.getItem(key);
   if (isValidJSON(values)) {
     return uniqArray(JSON.parse(values));
   } else {
@@ -35,16 +35,19 @@ function uniqArray(array) {
 }
 
 async function openPinnedTabs() {
-  let discovered_tabs;
+  let discovered_tabs = [];
   const urls = loadStrageArray("urls");
-  for (let url of urls) {
-    discovered_tabs = await browser.tabs.query({
-      url: "*://*." + formatDomain(url) + "/*",
+  for (const urll of urls) {
+    await chrome.tabs.query({
+      url: "*://*." + formatDomain(urll) + "/*",
       pinned: true,
       currentWindow: true,
+    }, (e) => {
+      discovered_tabs = e;
     });
-    if (!discovered_tabs.length) {
-      browser.tabs.create({
+
+    if (discovered_tabs.length != 0) {
+      chrome.tabs.create({
         url: "http://" + url,
         pinned: true,
         active: false,
@@ -53,4 +56,4 @@ async function openPinnedTabs() {
   }
 }
 
-export { loadStrageArray, formatDomain, uniqArray, openPinnedTabs };
+export { formatDomain, loadStrageArray, openPinnedTabs, uniqArray };
